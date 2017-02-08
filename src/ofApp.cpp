@@ -3,6 +3,15 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
+    mesh.addVertex ( ofVec3f ( 0 , 0 ));
+    mesh.addColor ( ofColor::blue );
+    mesh.addVertex ( ofVec3f ( ofGetWidth() , 0 ));
+    mesh.addColor ( ofColor::yellow );
+    mesh.addVertex ( ofVec3f ( ofGetWidth() , ofGetHeight()));
+    mesh.addColor ( ofColor::green );
+    mesh.addVertex ( ofVec3f ( 0 , ofGetHeight()));
+    mesh.addColor ( ofColor::red );
+    mesh.setMode (OF_PRIMITIVE_TRIANGLE_FAN );
 }
 
 //--------------------------------------------------------------
@@ -12,7 +21,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
+    mesh.draw();
 }
 
 //--------------------------------------------------------------
